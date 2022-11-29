@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bingo HK</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="main_dispo">
+      <div class="bouttons_lg">
+        <button value="court" onclick="uplist('short');">Court</button>
+        <button value="moyen" onclick="uplist('mid');">Moyen</button>
+        <button value="long" onclick="uplist('long');">Long</button>
+        <button value="Random" onclick="uplist('random');">Random</button>
+        <br />
+      </div>
+
+      <div class="centered">
+        <div class="seed_block">
+          <div class="seed_element">
+            <span>Seed : </span> <span id="seed"></span>
+          </div>
+          <div class="seed_element">
+            <span>Longueur : </span><span id="lg">short</span>
+          </div>
+          <div class="seed_element">
+            <input type="number" id="entered_seed" />
+            <input
+              type="button"
+              onclick="upseed(document.getElementById('entered_seed').value)"
+              value="Générer avec la seed"
+            />
+            <br />
+          </div>
+        </div>
+        <br />
+        <div class="grille_bingo">
+          <table class="grille">
+            <tr>
+              <td>
+                <button
+                  id="11"
+                  class="bingo_box neutral"
+                  onclick="case_update(11)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="12"
+                  class="bingo_box neutral"
+                  onclick="case_update(12)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="13"
+                  class="bingo_box neutral"
+                  onclick="case_update(13)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="14"
+                  class="bingo_box neutral"
+                  onclick="case_update(14)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="15"
+                  class="bingo_box neutral"
+                  onclick="case_update(15)"
+                >
+                  vide
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  id="21"
+                  class="bingo_box neutral"
+                  onclick="case_update(21)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="22"
+                  class="bingo_box neutral"
+                  onclick="case_update(22)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="23"
+                  class="bingo_box neutral"
+                  onclick="case_update(23)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="24"
+                  class="bingo_box neutral"
+                  onclick="case_update(24)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="25"
+                  class="bingo_box neutral"
+                  onclick="case_update(25)"
+                >
+                  vide
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  id="31"
+                  class="bingo_box neutral"
+                  onclick="case_update(31)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="32"
+                  class="bingo_box neutral"
+                  onclick="case_update(32)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="33"
+                  class="bingo_box neutral"
+                  onclick="case_update(33)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="34"
+                  class="bingo_box neutral"
+                  onclick="case_update(34)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="35"
+                  class="bingo_box neutral"
+                  onclick="case_update(35)"
+                >
+                  vide
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  id="41"
+                  class="bingo_box neutral"
+                  onclick="case_update(41)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="42"
+                  class="bingo_box neutral"
+                  onclick="case_update(42)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="43"
+                  class="bingo_box neutral"
+                  onclick="case_update(43)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="44"
+                  class="bingo_box neutral"
+                  onclick="case_update(44)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="45"
+                  class="bingo_box neutral"
+                  onclick="case_update(45)"
+                >
+                  vide
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  id="51"
+                  class="bingo_box neutral"
+                  onclick="case_update(51)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="52"
+                  class="bingo_box neutral"
+                  onclick="case_update(52)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="53"
+                  class="bingo_box neutral"
+                  onclick="case_update(53)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="54"
+                  class="bingo_box neutral"
+                  onclick="case_update(54)"
+                >
+                  vide
+                </button>
+              </td>
+              <td>
+                <button
+                  id="55"
+                  class="bingo_box neutral"
+                  onclick="case_update(55)"
+                >
+                  vide
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="theme_changer">
+          <h4 class="seed_block">Theme Switcher</h4>
+          <button
+            id="theme basic"
+            class="theme_button"
+            onclick="setTheme('theme-basic')"
+          >
+            Basic
+          </button>
+          <button
+            id="theme void"
+            class="theme_button"
+            onclick="setTheme('theme-void')"
+          >
+            Void
+          </button>
+          <button
+            id="theme grimm"
+            class="theme_button"
+            onclick="setTheme('theme-grimm')"
+          >
+            Grimm
+          </button>
+          <button
+            id="theme greenpath"
+            class="theme_button"
+            onclick="setTheme('theme-greenpath')"
+          >
+            Greenpath
+          </button>
+          <button
+            id="theme seer"
+            class="theme_button"
+            onclick="setTheme('theme-seer')"
+          >
+            Hidden dreams
+          </button>
+        </div>
+      </div>
+
+      <div class="mode_sel">
+        <button id="selecter" class="select" onclick="set_mode('select')">
+          <img height="64px" src="ressources/kingsoul.png" />
+        </button>
+        <button id="locker" class="neutral" onclick="set_mode('lock')">
+          <img height="64px" src="ressources/lightseed.png" />
+        </button>
+        <button id="goaler" class="neutral" onclick="set_mode('goal')">
+          <img height="64px" src="ressources/lifebloodwish.png" />
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

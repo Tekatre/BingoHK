@@ -643,3 +643,45 @@ function toggleTheme() {
 (function () {
   setTheme("theme-dark");
 })();
+
+// ======= Fonctions de TRI =======
+
+var diff_coefs = [];
+var compared_list = []; // Liste d'origine décrémentée
+var diff_list = []; // Liste ordonée par difficultés
+var new_el;
+var dicho;
+
+function indexify(list) {
+  for (let i = 0; i < list.length; i++) {
+    list[i] = [list[i], i];
+  }
+}
+
+function sort_start(list) {
+  compared_list = [...list];
+  document.getElementById("chall_coef").innerText = diff_coefs.toString();
+  if (diff_list.length == 0) {
+    diff_list.push(compared_list.pop());
+  }
+  dicho = Math.floor(diff_list.length / 2);
+  document.getElementById("comp_chall").innerText = diff_list[dicho];
+  new_el = compared_list.pop();
+  document.getElementById("new_chall").innerText = new_el;
+  console.log(diff_list, compared_list);
+}
+
+function diff_add() {
+  const new_dicho = 0;
+  if (diff_list.length != 1) {
+    const new_dicho = Math.ceil((dicho + diff_list.length) / 2);
+  }
+  console.log(dicho, new_dicho);
+  if (new_dicho == dicho) {
+    diff_list.splice(dicho + 1, 0, new_el);
+    console.log(diff_list);
+  } else {
+    dicho = new_dicho;
+    document.getElementById("comp_chall").innerText = diff_list[dicho];
+  }
+}

@@ -650,7 +650,8 @@ var diff_coefs = [];
 var compared_list = []; // Liste d'origine décrémentée
 var diff_list = []; // Liste ordonée par difficultés
 var new_el;
-var dicho;
+var dicho_bas = 0;
+var dicho_hte = 1;
 
 function indexify(list) {
   for (let i = 0; i < list.length; i++) {
@@ -664,24 +665,75 @@ function sort_start(list) {
   if (diff_list.length == 0) {
     diff_list.push(compared_list.pop());
   }
-  dicho = Math.floor(diff_list.length / 2);
-  document.getElementById("comp_chall").innerText = diff_list[dicho];
+  document.getElementById("comp_chall").innerText =
+    diff_list[Math.floor(diff_list.length / 2)];
   new_el = compared_list.pop();
   document.getElementById("new_chall").innerText = new_el;
-  console.log(diff_list, compared_list);
+  console.log(diff_list, new_el);
 }
 
 function diff_add() {
-  const new_dicho = 0;
-  if (diff_list.length != 1) {
-    const new_dicho = Math.ceil((dicho + diff_list.length) / 2);
-  }
-  console.log(dicho, new_dicho);
-  if (new_dicho == dicho) {
-    diff_list.splice(dicho + 1, 0, new_el);
-    console.log(diff_list);
+  console.log(dicho_bas, dicho_hte);
+  if (diff_list.length == 1) {
+    diff_list.push(new_el); //ici diff_list.length = 2
+    new_el = compared_list.pop();
+    document.getElementById("new_chall").innerText = new_el;
   } else {
-    dicho = new_dicho;
-    document.getElementById("comp_chall").innerText = diff_list[dicho];
+    dicho_bas = Math.ceil((dicho_bas + dicho_hte) / 2);
+    if (dicho_bas == dicho_hte) {
+      diff_list.splice(dicho_bas, 0, new_el);
+      new_el = compared_list.pop();
+      document.getElementById("new_chall").innerText = new_el;
+      dicho_bas = 0;
+      dicho_hte = diff_list.length;
+      document.getElementById("comp_chall").innerText =
+        diff_list[Math.floor((dicho_bas + dicho_hte) / 2)];
+      console.log("Changement de défi");
+    } else {
+      document.getElementById("comp_chall").innerText =
+        diff_list[Math.floor((dicho_bas + dicho_hte) / 2)];
+      console.log("Changement de comparateur");
+    }
+  }
+  console.log(diff_list, new_el);
+  sort_end();
+}
+
+function diff_sub() {
+  console.log(dicho_bas, dicho_hte);
+  if (diff_list.length == 1) {
+    diff_list.push(new_el); //ici diff_list.length = 2
+    new_el = compared_list.pop();
+    document.getElementById("new_chall").innerText = new_el;
+  } else {
+    dicho_hte = Math.floor((dicho_bas + dicho_hte) / 2);
+    if (dicho_bas == dicho_hte) {
+      diff_list.splice(dicho_bas, 0, new_el);
+      new_el = compared_list.pop();
+      document.getElementById("new_chall").innerText = new_el;
+      dicho_bas = 0;
+      dicho_hte = diff_list.length;
+      document.getElementById("comp_chall").innerText =
+        diff_list[Math.floor((dicho_bas + dicho_hte) / 2)];
+      console.log("Changement de défi");
+    } else {
+      document.getElementById("comp_chall").innerText =
+        diff_list[Math.floor((dicho_bas + dicho_hte) / 2)];
+      console.log("Changement de comparateur");
+    }
+  }
+  console.log(diff_list, new_el);
+  sort_end();
+}
+
+function sort_end() {
+  if (compared_list.length == 0) {
+    document.getElementById("comp_chall").innerText = "Fin du TRI";
+    document.getElementById("new_chall").innerText = "Fin du TRI";
+    const c = Math.floor(100 / diff_list.length);
+    for (let i = 0; i < diff_list.length; i++) {
+      diff_coefs.push(i * c);
+      console.log(diff_list[i], " ", i * c);
+    }
   }
 }

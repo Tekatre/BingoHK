@@ -1,0 +1,28 @@
+html {
+  --darkBG-D: #4d3c5d;
+  --darkBG-L: #5f4677;
+
+  --lightTxt-L: #ffffff;
+  --lightTxt-D: #eee4ff;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--darkBG-D);
+  color: var(--lightTxt-D);
+  font-family: "Trajan Pro Regular", serif;
+}
+
+a {
+  font-size: x-large;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  padding: 10px 20px 10px 20px;
+}
+
+a:hover {
+  color: var(--lightTxt-L);
+  background-color: var(--darkBG-L);
+}

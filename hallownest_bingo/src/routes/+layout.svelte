@@ -1,7 +1,10 @@
+<script>
+  import "../style.css";
+</script>
+
 <nav>
-  <a href="/">Game</a>
-  <a href="/challenges">Challenges</a>
-  <p>placeholder</p>
+  <a href="/">GAME</a>
+  <a href="/challenges">CHALLENGES</a>
 </nav>
 
 <slot />

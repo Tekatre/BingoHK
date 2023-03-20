@@ -27,6 +27,7 @@ img {
 h1 {
   text-align: center;
   color: var(--lightTxt-L);
+  text-shadow: rgb(0, 0, 0) 0 0 10px;
 }
 
 nav {

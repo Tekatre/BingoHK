@@ -1,3 +1,3 @@
-<h1>Game page</h1>
+<h1>Challenges page</h1>
 
 <p>Work in progress</p>

@@ -1,3 +1,91 @@
 <h1>Game page</h1>
 
-<p>Work in progress</p>
+<section>
+  <tr>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+  </tr>
+  <tr>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+  </tr>
+  <tr>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+  </tr>
+  <tr>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+  </tr>
+  <tr>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+    <th>
+      <button />
+    </th>
+  </tr>
+</section>
+
+<aside />

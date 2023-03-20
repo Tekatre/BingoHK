@@ -2,6 +2,8 @@ html {
   --darkBG-D: #4d3c5d;
   --darkBG-L: #5f4677;
 
+  --buttonBody: rgba(235, 198, 96, 0.336);
+
   --lightTxt-L: #ffffff;
   --lightTxt-D: #eee4ff;
 }
@@ -31,6 +33,7 @@ h1 {
 }
 
 nav {
+  width: 100%;
   display: flex;
   flex-direction: row;
   background-color: var(--darkBG-D);
@@ -49,4 +52,53 @@ a {
 a:hover {
   color: var(--lightTxt-L);
   background-color: var(--darkBG-L);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  text-align: center;
+  color: var(--lightTxt-D);
+  vertical-align: middle;
+
+  backdrop-filter: blur(5px);
+  background-color: var(--buttonBody);
+  background-repeat: no-repeat;
+  border-radius: 1px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
+  padding: 5px;
+  height: 110px;
+  width: 110px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 40px;
+  padding: 10px;
+}
+
+.option-display {
+  color: var(--lightTxt-D);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+}
+
+.button-list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  column-gap: 5px;
 }

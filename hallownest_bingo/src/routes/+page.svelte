@@ -1,91 +1,116 @@
-<h1>Game page</h1>
+<main>
+  <section>
+    <table>
+      <tr>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+        <th>
+          <button class="bingo-cell">placeholder</button>
+        </th>
+      </tr>
+    </table>
+  </section>
 
-<section>
-  <tr>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-  </tr>
-  <tr>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-  </tr>
-  <tr>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-  </tr>
-  <tr>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-  </tr>
-  <tr>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-    <th>
-      <button />
-    </th>
-  </tr>
-</section>
+  <aside>
+    <section class="option-display">
+      <h4>PLACEHOLDER</h4>
+      <div class="button-list">
+        <button>placeholder</button>
+        <button>placeholder</button>
+        <button>placeholder</button>
+      </div>
+    </section>
+    <section class="option-display">
+      <h4>PLACEHOLDER</h4>
+      <div class="button-list">
+        <button>placeholder</button>
+        <button>placeholder</button>
+        <button>placeholder</button>
+        <button>placeholder</button>
+        <button>placeholder</button>
+        <button>placeholder</button>
+        <button>placeholder</button>
+      </div>
+    </section>
+  </aside>
+</main>
 
-<aside />
+<footer />

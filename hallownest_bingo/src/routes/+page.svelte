@@ -113,4 +113,14 @@
   </aside>
 </main>
 
-<footer />
+<footer>
+  <h4>PLACEHOLDER</h4>
+  <section class="bingo-generator">
+    <span>placeholder</span>
+    <form>
+      <span>SEED</span>
+      <input type="text" />
+      <input type="button" value="generate" />
+    </form>
+  </section>
+</footer>

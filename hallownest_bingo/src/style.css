@@ -8,25 +8,118 @@ html {
   --lightTxt-D: #eee4ff;
 }
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 body {
   background-color: black;
 }
 
 header {
-  background-image: url("HK-seal.png");
+  padding: 0px;
+  /*background-image: url("HK-seal.png");*/
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 0px;
 }
 
 img {
   width: 50%;
+  max-width: 400px;
 }
 
 h1 {
+  font-size: 50px;
   text-align: center;
   color: var(--lightTxt-L);
   text-shadow: rgb(0, 0, 0) 0 0 10px;
@@ -55,11 +148,15 @@ a:hover {
 }
 
 main {
+  padding: 25px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  column-gap: 30px;
 }
 
 button {
+  flex-shrink: 0;
   text-align: center;
   color: var(--lightTxt-D);
   vertical-align: middle;
@@ -87,6 +184,8 @@ aside {
   justify-content: center;
   row-gap: 40px;
   padding: 10px;
+  max-width: 340px;
+  overflow: hidden;
 }
 
 .option-display {
@@ -94,11 +193,13 @@ aside {
   display: flex;
   flex-direction: column;
   row-gap: 1px;
+  width: inherit;
 }
 
 .button-list {
   display: flex;
   flex-direction: row;
-  overflow-x: auto;
   column-gap: 5px;
+  overflow: hidden;
+  overflow-x: auto;
 }

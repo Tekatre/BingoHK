@@ -153,6 +153,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   column-gap: 30px;
 }
 
@@ -191,13 +192,24 @@ main {
   width: 60px;
 }
 
+.line {
+  height: 550px;
+  width: 3px;
+  background: var(--darkBG-L);
+  background: radial-gradient(
+    circle,
+    var(--darkBG-L) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
 aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
   row-gap: 40px;
   padding: 10px;
-  max-width: 260px;
+  max-width: 280px;
   overflow: hidden;
 }
 
@@ -217,6 +229,11 @@ aside {
   overflow-x: auto;
 }
 
+.button-list::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
 h4 {
   font-size: large;
 }
@@ -232,7 +249,6 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  row-gap: 10px;
   color: var(--lightTxt-D);
 }
 
@@ -249,10 +265,12 @@ footer {
 .seed-form {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
-  min-width: 400px;
+  min-width: 300px;
+  max-width: 500px;
   width: 40%;
+  column-gap: 10px;
   font-size: X-large;
 }
 
@@ -263,10 +281,10 @@ input[type="text"] {
   background-color: var(--BGcolor);
   border: none;
 
-  width: 60%;
+  width: 50%;
   height: 30px;
 }
 
-.padding-5px {
-  padding: 5px;
+input[type="button"] {
+  height: 37px;
 }

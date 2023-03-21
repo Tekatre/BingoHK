@@ -89,9 +89,11 @@
     </table>
   </section>
 
+  <div class="line" />
+
   <aside>
     <section class="option-display">
-      <h4>PLACEHOLDER</h4>
+      <h4>SELECTION</h4>
       <div class="button-list">
         <button class="inter-button">X</button>
         <button class="inter-button">X</button>
@@ -99,7 +101,7 @@
       </div>
     </section>
     <section class="option-display">
-      <h4>PLACEHOLDER</h4>
+      <h4>THEME</h4>
       <div class="button-list">
         <button class="inter-button">X</button>
         <button class="inter-button">X</button>
@@ -114,7 +116,7 @@
 </main>
 
 <footer>
-  <h2>PLACEHOLDER</h2>
+  <h2>GENERATE GRID</h2>
   <section class="bingo-generator">
     <div class="button-list">
       <button class="inter-button">X</button>
@@ -123,7 +125,7 @@
       <button class="inter-button">X</button>
     </div>
     <form class="seed-form">
-      <span class="padding-5px">SEED :</span>
+      <span>SEED :</span>
       <input type="text" />
       <input type="button" value="RUN" class="inter-button" />
     </form>

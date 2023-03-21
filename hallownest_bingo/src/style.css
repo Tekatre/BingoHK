@@ -2,7 +2,8 @@ html {
   --darkBG-D: #4d3c5d;
   --darkBG-L: #5f4677;
 
-  --buttonBody: rgba(235, 198, 96, 0.336);
+  --buttonBody: rgba(1, 2, 8, 0.336);
+  --BGcolor: #0c1025;
 
   --lightTxt-L: #ffffff;
   --lightTxt-D: #eee4ff;
@@ -98,7 +99,7 @@ video {
 }
 
 body {
-  background-color: black;
+  background-color: var(--BGcolor);
 }
 
 header {
@@ -155,7 +156,7 @@ main {
   column-gap: 30px;
 }
 
-button {
+.bingo-cell {
   flex-shrink: 0;
   text-align: center;
   color: var(--lightTxt-D);
@@ -164,7 +165,7 @@ button {
   backdrop-filter: blur(5px);
   background-color: var(--buttonBody);
   background-repeat: no-repeat;
-  border-radius: 1px;
+  border-radius: 3px;
   border: none;
   cursor: pointer;
   overflow: hidden;
@@ -178,13 +179,25 @@ button {
   width: 110px;
 }
 
+.inter-button {
+  flex-shrink: 0;
+  color: var(--lightTxt-D);
+
+  background-color: var(--buttonBody);
+  border: none;
+  border-radius: 9px;
+
+  height: 60px;
+  width: 60px;
+}
+
 aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
   row-gap: 40px;
   padding: 10px;
-  max-width: 340px;
+  max-width: 260px;
   overflow: hidden;
 }
 
@@ -192,7 +205,7 @@ aside {
   color: var(--lightTxt-D);
   display: flex;
   flex-direction: column;
-  row-gap: 1px;
+  row-gap: 10px;
   width: inherit;
 }
 
@@ -208,10 +221,16 @@ h4 {
   font-size: large;
 }
 
+h2 {
+  padding: 5px;
+  font-size: x-large;
+}
+
 footer {
   padding: 5px;
   background-color: var(--darkBG-D);
   display: flex;
+  align-items: center;
   flex-direction: column;
   row-gap: 10px;
   color: var(--lightTxt-D);
@@ -220,5 +239,34 @@ footer {
 .bingo-generator {
   display: flex;
   flex-direction: row;
-  column-gap: 10px;
+  align-items: baseline;
+  justify-content: center;
+  column-gap: 40px;
+
+  width: 100%;
+}
+
+.seed-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 400px;
+  width: 40%;
+  font-size: X-large;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--lightTxt-D);
+  background-color: var(--BGcolor);
+  border: none;
+
+  width: 60%;
+  height: 30px;
+}
+
+.padding-5px {
+  padding: 5px;
 }

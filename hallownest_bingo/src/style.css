@@ -3,6 +3,7 @@ html {
   --darkBG-L: #5f4677;
 
   --buttonBody: rgba(1, 2, 8, 0.336);
+  --hoverLight: #74737386;
   --BGcolor: #0c1025;
 
   --lightTxt-L: #ffffff;
@@ -184,12 +185,49 @@ main {
   flex-shrink: 0;
   color: var(--lightTxt-D);
 
-  background-color: var(--buttonBody);
+  background-color: transparent;
+
   border: none;
   border-radius: 9px;
 
-  height: 60px;
-  width: 60px;
+  padding: 7px;
+  height: 65px;
+  width: 65px;
+}
+
+.inter-button:hover {
+  background-image: url("button-selector-hover.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 49%;
+}
+
+.button-handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--buttonBody);
+
+  border-radius: 5px;
+
+  height: 100%;
+  width: 100%;
+}
+
+.button-handler:hover {
+  background: radial-gradient(
+    circle,
+    var(--hoverLight) 0%,
+    var(--buttonBody) 80%
+  );
+}
+
+.selected {
+  background-image: url("button-selector.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 49%;
 }
 
 .line {
@@ -224,14 +262,8 @@ aside {
 .button-list {
   display: flex;
   flex-direction: row;
-  column-gap: 5px;
   overflow: hidden;
   overflow-x: auto;
-}
-
-.button-list::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
 }
 
 h4 {
@@ -257,7 +289,7 @@ footer {
   flex-direction: row;
   align-items: baseline;
   justify-content: center;
-  column-gap: 40px;
+  column-gap: 5%;
 
   width: 100%;
 }
@@ -267,9 +299,9 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 500px;
-  width: 40%;
+  width: 70%;
   column-gap: 10px;
   font-size: X-large;
 }
@@ -281,10 +313,18 @@ input[type="text"] {
   background-color: var(--BGcolor);
   border: none;
 
-  width: 50%;
+  width: 60%;
   height: 30px;
 }
 
 input[type="button"] {
+  color: var(--lightTxt-D);
+  background-color: var(--buttonBody);
+
+  border: none;
+  border-radius: 7px;
+
+  padding: 5px;
+  width: 80px;
   height: 37px;
 }

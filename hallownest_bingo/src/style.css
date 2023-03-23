@@ -311,7 +311,7 @@ input[type="text"] {
   font-weight: bold;
   color: var(--lightTxt-D);
   background-color: var(--BGcolor);
-  border: none;
+  border: solid white;
 
   width: 60%;
   height: 30px;

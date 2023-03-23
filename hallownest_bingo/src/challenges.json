@@ -1,0 +1,4 @@
+[ 
+  { "id": 1, "name": "compass", "kind": "charm", "desc_en": "Get the wayward compass", "desc_fr": "Obtenir la boussole murmurante", "diff": 1},
+  { "id": 2, "name": "fireball", "kind": "item", "desc_en": "Get vengeful spirit", "desc_fr": "Obtenir l'esprit vengeur", "diff": 1}
+]

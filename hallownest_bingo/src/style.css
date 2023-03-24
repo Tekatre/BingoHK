@@ -345,6 +345,7 @@ input[type="button"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 
   row-gap: 5px;
   column-gap: 5px;
@@ -374,6 +375,9 @@ tr {
   background-color: var(--darkBG-L);
 
   padding: 5px 0 5px 0;
+
+  border: solid var(--darkBG-D);
+  border-width: 0.5px;
 
   color: var(--lightTxt-D);
   font-size: medium;

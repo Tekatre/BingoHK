@@ -1,0 +1,10 @@
+[ 
+  { "id": 1, "name": "compass", "kind": "charm", "desc_en": "Get the wayward compass", "desc_fr": "Obtenir la boussole murmurante", "diff": 1},
+  { "id": 2, "name": "fireball", "kind": "item", "desc_en": "Get vengeful spirit", "desc_fr": "Obtenir l'esprit vengeur", "diff": 1},
+  { "id": 3, "name": "honert1", "kind": "boss", "desc_en": "Beat Hornet 1", "desc_fr": "Battre Hornet 1", "diff": 1},
+  { "id": 4, "name": "falseknight", "kind": "boss", "desc_en": "Beat False Knight", "desc_fr": "Battre le Faux Chevalier", "diff": 1},
+  { "id": 5, "name": "gruz", "kind": "boss", "desc_en": "Slay Gruz mother", "desc_fr": "Tuer la Mère Gruz", "diff": 1},
+  { "id": 6, "name": "mantislords", "kind": "boss", "desc_en": "Beat Matnis Lords", "desc_fr": "Battre les Dames Mantes", "diff": 1},
+  { "id": 7, "name": "vengefly", "kind": "boss", "desc_en": "Slay Vengefly King", "desc_fr": "Tuer la Mouche Vengeresse Royale", "diff": 1},
+  { "id": 3, "name": "Honert1", "kind": "boss", "desc_en": "Slay Brooding Mawlek", "desc_fr": "Tuer Mawlek le pessimiste", "diff": 1}
+]

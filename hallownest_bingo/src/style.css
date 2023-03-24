@@ -230,7 +230,7 @@ main {
   background-position: 49%;
 }
 
-.line {
+.vline {
   height: 550px;
   width: 3px;
   background: var(--darkBG-L);
@@ -238,6 +238,17 @@ main {
     circle,
     var(--darkBG-L) 0%,
     rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.hline {
+  height: 1px;
+  width: 100%;
+  background: var(--lightTxt-L);
+  background: radial-gradient(
+    circle,
+    var(--lightTxt-L) 0%,
+    var(--darkBG-L) 100%
   );
 }
 
@@ -347,8 +358,8 @@ input[type="button"] {
   flex-wrap: wrap;
   justify-content: center;
 
-  row-gap: 5px;
-  column-gap: 5px;
+  row-gap: 15px;
+  column-gap: 15px;
 }
 
 .chall-table {
@@ -358,6 +369,8 @@ input[type="button"] {
   text-align: center;
 
   border: solid var(--lightTxt-L);
+  border-width: 1px;
+
   width: 30%;
   height: fit-content;
 }
@@ -375,9 +388,6 @@ tr {
   background-color: var(--darkBG-L);
 
   padding: 5px 0 5px 0;
-
-  border: solid var(--darkBG-D);
-  border-width: 0.5px;
 
   color: var(--lightTxt-D);
   font-size: medium;

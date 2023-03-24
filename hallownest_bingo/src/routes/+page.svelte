@@ -89,7 +89,7 @@
     </table>
   </section>
 
-  <div class="line" />
+  <div class="vline" />
 
   <aside>
     <section class="option-display">

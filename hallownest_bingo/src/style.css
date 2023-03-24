@@ -329,6 +329,17 @@ input[type="button"] {
   height: 37px;
 }
 
+.chall-form {
+  display: flex;
+  flex-direction: row;
+
+  column-gap: 10px;
+
+  background-color: var(--darkBG-L);
+
+  padding: 5px;
+}
+
 p {
   color: var(--lightTxt-D);
 }

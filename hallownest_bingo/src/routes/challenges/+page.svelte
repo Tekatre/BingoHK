@@ -24,20 +24,20 @@
         {/if}
       {/each}
     </div>
-    <div class="chall-table" id="chall-charm">
-      <th>CHARMS</th>
-      <div class="hline" />
-      {#each challs as chall}
-        {#if chall.kind == "charm"}
-          <tr>{chall.desc_fr}</tr>
-        {/if}
-      {/each}
-    </div>
     <div class="chall-table" id="chall-db">
       <th>DREAM BOSSES</th>
       <div class="hline" />
       {#each challs as chall}
         {#if chall.kind == "db"}
+          <tr>{chall.desc_fr}</tr>
+        {/if}
+      {/each}
+    </div>
+    <div class="chall-table" id="chall-charm">
+      <th>CHARMS</th>
+      <div class="hline" />
+      {#each challs as chall}
+        {#if chall.kind == "charm"}
           <tr>{chall.desc_fr}</tr>
         {/if}
       {/each}

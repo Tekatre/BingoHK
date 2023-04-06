@@ -122,6 +122,7 @@ img {
 
 h1 {
   font-size: 50px;
+  font-family: "Trajan";
   text-align: center;
   color: var(--lightTxt-L);
   text-shadow: rgb(0, 0, 0) 0 0 10px;
@@ -174,10 +175,6 @@ main {
 
   border: none;
 
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bolder;
-  font-size: 15px;
-
   padding: 15px;
   height: 135px;
   width: 135px;
@@ -207,6 +204,10 @@ main {
 
 .cell-text {
   color: inherit;
+  font-family: "Trajan";
+  text-shadow: -1px -1px 0 var(--BGcolor), 1px -1px 0 var(--BGcolor),
+    -1px 1px 0 var(--BGcolor), 1px 1px 0 var(--BGcolor);
+  font-size: 15px;
 }
 
 .inter-button {

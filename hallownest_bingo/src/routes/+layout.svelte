@@ -1,4 +1,5 @@
 <script>
+  import "../fonts.css";
   import "../app.postcss";
   import "../style.css";
 </script>

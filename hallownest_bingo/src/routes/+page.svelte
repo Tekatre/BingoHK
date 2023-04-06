@@ -37,9 +37,7 @@
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text"
-            >A fucking long placeholder i mean like really long</span
-          >
+          <span class="cell-text">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</span>
         </div></button
       >
     </div>

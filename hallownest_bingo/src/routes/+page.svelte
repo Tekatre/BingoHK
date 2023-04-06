@@ -201,8 +201,6 @@
         >
         <button class="inter-button"><div class="button-handler">X</div></button
         >
-        <button class="inter-button"><div class="button-handler">X</div></button
-        >
       </div>
     </section>
     <section class="option-display">

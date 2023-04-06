@@ -158,27 +158,55 @@ main {
   column-gap: 30px;
 }
 
-.bingo-cell {
-  flex-shrink: 0;
-  text-align: center;
-  color: var(--lightTxt-D);
-  vertical-align: middle;
+.bingo-grid {
+  display: flex;
+  flex-direction: column;
+}
 
-  backdrop-filter: blur(5px);
-  background-color: var(--buttonBody);
-  background-repeat: no-repeat;
-  border-radius: 3px;
+.bingo-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.bingo-cell {
+  background-color: transparent;
+  color: var(--lightTxt-L);
+
   border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
 
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bolder;
   font-size: 15px;
-  padding: 5px;
-  height: 110px;
-  width: 110px;
+
+  padding: 15px;
+  height: 135px;
+  width: 135px;
+}
+
+.bingo-cell:hover {
+  background-image: url("button-selector-hover.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 49%;
+}
+
+.cell-handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+
+  background-color: var(--buttonBody);
+  background-size: 90%;
+
+  border-radius: 5px;
+
+  height: 100%;
+  width: 100%;
+}
+
+.cell-text {
+  color: inherit;
 }
 
 .inter-button {
@@ -228,6 +256,7 @@ main {
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: 49%;
+  color: var(--lightTxt-D);
 }
 
 .vline {

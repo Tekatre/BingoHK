@@ -1,92 +1,194 @@
+<script lang="ts">
+  import challs from "../public/challenges.json";
+
+  const short_entries: String[] = [];
+</script>
+
 <main>
-  <section>
-    <table>
-      <tr>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-        <th>
-          <button class="bingo-cell">placeholder</button>
-        </th>
-      </tr>
-    </table>
+  <section class="bingo-grid">
+    <div class="bingo-row">
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell selected"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell selected"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+    </div>
+    <div class="bingo-row">
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell selected"
+        ><div class="cell-handler">
+          A fucking long placeholder i mean like really long
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+    </div>
+    <div class="bingo-row">
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell selected"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+    </div>
+    <div class="bingo-row">
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+    </div>
+    <div class="bingo-row">
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >A fucking long placeholder i mean like really long</span
+          >
+        </div></button
+      >
+    </div>
   </section>
 
   <div class="vline" />

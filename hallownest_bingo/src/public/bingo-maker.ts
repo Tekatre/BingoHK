@@ -1,13 +1,11 @@
 
-let grid_id : number[][] = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
-
 /**
  * Upate the grid with the ids of challenges in the list of entries
  * @param grid  a matrix representing the bingo grid
  * @param seed  a randomly generated integer
  * @param entries  the list of ids of all the entries that can appear in the bingo grid 
  */
-function build_grid_id(grid:number[][], seed:number, entries:number[]) : number[][]{
+export function build_grid_id(grid:number[][], seed:number, entries:number[]) : number[][]{
   for (let row = 0; row < grid.length; row++) {
     for (let line = 0; line < grid[row].length; line++) {
       seed = gcl_step(seed)
@@ -31,3 +29,4 @@ let modulo : number = 2 ** 16+1;
 function gcl_step(seed:number) : number {
   return (coef_a * seed + coef_c) % modulo;
 }
+

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import challs from "../public/challenges.json";
+  import type { PageData } from "./$types";
 
-  const short_entries: String[] = [];
+  export let data: PageData;
 </script>
 
 <main>
@@ -9,9 +9,7 @@
     <div class="bingo-row">
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text"
-            >A fucking long placeholder i mean like really long</span
-          >
+          <span class="cell-text">{data.chall.challenges[0].desc_fr}</span>
         </div></button
       >
       <button class="bingo-cell"

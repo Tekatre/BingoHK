@@ -5,6 +5,7 @@ html {
   --buttonBody: rgba(1, 2, 8, 0.336);
   --hoverLight: #74737386;
   --BGcolor: #0c1025;
+  --winBG: #f1d96e55;
 
   --lightTxt-L: #ffffff;
   --lightTxt-D: #eee4ff;
@@ -202,6 +203,14 @@ main {
   width: 100%;
 }
 
+.cell-handler:hover {
+  background: radial-gradient(
+    circle,
+    var(--hoverLight) 0%,
+    var(--buttonBody) 80%
+  );
+}
+
 .cell-text {
   color: inherit;
   font-family: "Trajan";
@@ -258,6 +267,15 @@ main {
   background-repeat: no-repeat;
   background-position: 49%;
   color: var(--lightTxt-D);
+}
+
+.win {
+  background-image: url("back_disc_50_percent.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: var(--winBG);
+  color: var(--lightTxt-L);
 }
 
 .vline {

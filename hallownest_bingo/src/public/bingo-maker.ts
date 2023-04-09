@@ -42,7 +42,6 @@ export function translate(id:number, langage:String, translator: any[]) : string
   let desc : string = "placeholder"
   translator.forEach(element => {
     if (element.id == id) {
-    console.log(element.id, id)
       switch (langage) {
         case "fr":
           desc = element.desc_fr

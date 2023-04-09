@@ -1,9 +1,26 @@
 <script lang="ts">
   import type { PageData } from "./$types";
   import { translate } from "../public/bingo-maker";
-  import { handle_cell_click } from "../public/bingo-manager";
+  import { cell_select_switch } from "../public/bingo-manager";
 
   export let data: PageData;
+
+  function handle_cell_click(event: MouseEvent) {
+    if (event.currentTarget instanceof HTMLButtonElement) {
+      cell_select_switch(event.currentTarget, win_grid);
+    } else {
+      console.log(typeof event.currentTarget);
+    }
+    console.log(win_grid);
+  }
+
+  let win_grid: number[][] = [
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+  ];
 
   let grid_id: number[][] = data.first_grid.grid_id;
   let lang: string = "fr";

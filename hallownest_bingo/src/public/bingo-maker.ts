@@ -1,4 +1,5 @@
 
+
 /**
  * Upate the grid with the ids of challenges in the list of entries
  * @param grid  a matrix representing the bingo grid
@@ -28,5 +29,32 @@ let modulo : number = 2 ** 16+1;
  */
 function gcl_step(seed:number) : number {
   return (coef_a * seed + coef_c) % modulo;
+}
+
+/**
+ * Takes an id to link it to the challenge description in the correct langage
+ * @param id the id of the challenge put in the grid
+ * @param langage a string code that indicates a langage ("en" for english)
+ * @param translator a list of Json elements containing an id and the different descriptions
+ * @returns the description of the challenge with the id
+ */
+export function translate(id:number, langage:String, translator: any[]) : string {
+  let desc : string = "placeholder"
+  translator.forEach(element => {
+    if (element.id == id) {
+    console.log(element.id, id)
+      switch (langage) {
+        case "fr":
+          desc = element.desc_fr
+          break
+        case "en":
+          desc = element.desc_en
+          break
+        default:
+          desc = element.desc_en
+      }
+    }
+  });
+  return desc
 }
 

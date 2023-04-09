@@ -1,10 +1,11 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import "../public/bingo-maker.ts";
+  import { translate } from "../public/bingo-maker";
 
   export let data: PageData;
 
   let grid_id: number[][] = data.first_grid.grid_id;
+  let lang: string = "fr";
 </script>
 
 <main>
@@ -12,135 +13,183 @@
     <div class="bingo-row">
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[0][0]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[0][0], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[0][1]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[0][1], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell selected"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[0][2]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[0][2], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell selected"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[0][3]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[0][3], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[0][4]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[0][4], lang, data.translator.trans)}</span
+          >
         </div></button
       >
     </div>
     <div class="bingo-row">
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[1][0]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[1][0], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[1][1]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[1][1], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell selected"
         ><div class="cell-handler">
-          {grid_id[1][2]}
+          {translate(grid_id[1][2], lang, data.translator.trans)}
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[1][3]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[1][3], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[1][4]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[1][4], lang, data.translator.trans)}</span
+          >
         </div></button
       >
     </div>
     <div class="bingo-row">
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[2][0]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[2][0], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[2][1]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[2][1], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[2][2]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[2][2], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell selected"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[2][3]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[2][3], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[2][4]}</span>
-        </div></button
-      >
-    </div>
-    <div class="bingo-row">
-      <button class="bingo-cell"
-        ><div class="cell-handler">
-          <span class="cell-text">{grid_id[3][0]}</span>
-        </div></button
-      >
-      <button class="bingo-cell"
-        ><div class="cell-handler">
-          <span class="cell-text">{grid_id[3][1]}</span>
-        </div></button
-      >
-      <button class="bingo-cell"
-        ><div class="cell-handler">
-          <span class="cell-text">{grid_id[3][2]}</span>
-        </div></button
-      >
-      <button class="bingo-cell"
-        ><div class="cell-handler">
-          <span class="cell-text">{grid_id[3][3]}</span>
-        </div></button
-      >
-      <button class="bingo-cell"
-        ><div class="cell-handler">
-          <span class="cell-text">{grid_id[3][4]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[2][4], lang, data.translator.trans)}</span
+          >
         </div></button
       >
     </div>
     <div class="bingo-row">
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[4][0]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[3][0], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[4][1]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[3][1], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[4][2]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[3][2], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[4][3]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[3][3], lang, data.translator.trans)}</span
+          >
         </div></button
       >
       <button class="bingo-cell"
         ><div class="cell-handler">
-          <span class="cell-text">{grid_id[4][4]}</span>
+          <span class="cell-text"
+            >{translate(grid_id[3][4], lang, data.translator.trans)}</span
+          >
+        </div></button
+      >
+    </div>
+    <div class="bingo-row">
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >{translate(grid_id[4][0], lang, data.translator.trans)}</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >{translate(grid_id[4][1], lang, data.translator.trans)}</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >{translate(grid_id[4][2], lang, data.translator.trans)}</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >{translate(grid_id[4][3], lang, data.translator.trans)}</span
+          >
+        </div></button
+      >
+      <button class="bingo-cell"
+        ><div class="cell-handler">
+          <span class="cell-text"
+            >{translate(grid_id[4][4], lang, data.translator.trans)}</span
+          >
         </div></button
       >
     </div>

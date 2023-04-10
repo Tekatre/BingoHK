@@ -52,7 +52,7 @@
         </div></button
       >
       <button class="bingo-cell" id="03" on:click={handle_cell_click}
-        ><div class="cell-handler">
+        ><div class="cell-handler lock">
           <span class="cell-text"
             >{translate(grid_id[0][3], lang, data.translator.trans)}</span
           >

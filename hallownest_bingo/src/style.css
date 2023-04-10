@@ -6,6 +6,7 @@ html {
   --hoverLight: #74737386;
   --BGcolor: #0c1025;
   --winBG: #f1d96e23;
+  --lockBG: #fa6c2a23;
 
   --lightTxt-L: #ffffff;
   --lightTxt-D: #eee4ff;
@@ -267,6 +268,19 @@ main {
   background-repeat: no-repeat;
   background-position: 49%;
   color: var(--lightTxt-D);
+}
+
+.lock {
+  background-image: url("lock_selector.png");
+  background-size: 245%;
+  background-repeat: repeat-y;
+  background-position: 50% 5%;
+  background-color: transparent;
+
+  color: var(--darkBG-D);
+
+  border: solid 1px;
+  border-color: var(--winBG);
 }
 
 .win {

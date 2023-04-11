@@ -59,9 +59,10 @@ export function translate(id:number, langage:String, translator: any[]) : string
   return desc
 }
 
-function manage_seed(seeded : boolean) : string {
+function manage_seed(seed : string , seeded : boolean) : string {
+  //console.log(seeded, seed)
   if (seeded) {
-    return((<HTMLInputElement>document.getElementById("seed-input")).value)
+    return seed
   }
   else {
     return Math.floor(Math.random() * 10000).toString();
@@ -71,7 +72,8 @@ function manage_seed(seeded : boolean) : string {
 type Entries = {"short": number[], "mid":number[], "long": number[]}
 
 export function generate_bingo(len: string, seed: string, grid_id:number[][] ,seeded: boolean, entries: Entries) : [number[][],string] {
-    seed = manage_seed(seeded);
+    seed = manage_seed(seed, seeded);
+    //console.log(seed)
     let new_grid_id : number [][];
     switch (len) {
       case "short":

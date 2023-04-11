@@ -28,7 +28,8 @@
     classes_grid = classes_grid;
   }
 
-  function handle_length_mode_select(event: MouseEvent) {
+  function handle_length_mode_select(len_code: string, seeded: boolean) {
+    //console.log(seed, seeded);
     classes_grid = [
       ["", "", "", "", ""],
       ["", "", "", "", ""],
@@ -43,8 +44,9 @@
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
     ];
-    len = (<HTMLButtonElement>event.currentTarget).id;
-    [grid_id, seed] = generate_bingo(len, seed, grid_id, false, data.entries);
+    len = len_code;
+    [grid_id, seed] = generate_bingo(len, seed, grid_id, seeded, data.entries);
+    //console.log(seed);
   }
 
   let win_grid: number[][] = [
@@ -138,18 +140,25 @@
       <button
         class="inter-button selected"
         id="short"
-        on:click={handle_length_mode_select}
+        on:click={() => {
+          handle_length_mode_select("short", false);
+        }}
       >
         <div class="button-handler">Short</div></button
       >
-      <button class="inter-button" id="mid" on:click={handle_length_mode_select}
-        ><div class="button-handler">Mid</div></button
+      <button
+        class="inter-button"
+        id="mid"
+        on:click={() => {
+          handle_length_mode_select("mid", false);
+        }}><div class="button-handler">Mid</div></button
       >
       <button
         class="inter-button"
         id="long"
-        on:click={handle_length_mode_select}
-        ><div class="button-handler">Long</div></button
+        on:click={() => {
+          handle_length_mode_select("long", false);
+        }}><div class="button-handler">Long</div></button
       >
       <button class="inter-button" id="?"
         ><div class="button-handler">?</div></button
@@ -158,7 +167,14 @@
     <form class="seed-form">
       <span>SEED :</span>
       <input type="text" id="seed-input" bind:value={seed} />
-      <input type="button" value="RUN" class="run-button" />
+      <input
+        type="button"
+        value="RUN"
+        class="run-button"
+        on:click={() => {
+          handle_length_mode_select(len, true);
+        }}
+      />
     </form>
   </section>
 </footer>

@@ -37,189 +37,23 @@
 
 <main>
   <section class="bingo-grid">
-    <div class="bingo-row">
-      <button class="bingo-cell" id="00" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[0][0], lang, data.translator.trans)}</span
+    {#each grid_id as row, i}
+      <div class="bingo-row">
+        {#each row as cell, j}
+          <button
+            class="bingo-cell"
+            id={`${i}${j}`}
+            on:click={handle_cell_click}
           >
-        </div></button
-      >
-      <button class="bingo-cell" id="01" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[0][1], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="02" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[0][2], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="03" on:click={handle_cell_click}
-        ><div class="cell-handler lock">
-          <span class="cell-text"
-            >{translate(grid_id[0][3], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="04" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[0][4], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-    </div>
-    <div class="bingo-row">
-      <button class="bingo-cell" id="10" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[1][0], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="11" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[1][1], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="12" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          {translate(grid_id[1][2], lang, data.translator.trans)}
-        </div></button
-      >
-      <button class="bingo-cell" id="13" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[1][3], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="14" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[1][4], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-    </div>
-    <div class="bingo-row">
-      <button class="bingo-cell" id="20" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[2][0], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="21" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[2][1], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="22" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[2][2], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="23" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[2][3], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="24" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[2][4], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-    </div>
-    <div class="bingo-row">
-      <button class="bingo-cell" id="30" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[3][0], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="31" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[3][1], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="32" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[3][2], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="33" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[3][3], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="34" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[3][4], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-    </div>
-    <div class="bingo-row">
-      <button class="bingo-cell" id="40" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[4][0], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="41" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[4][1], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="42" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[4][2], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="43" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[4][3], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-      <button class="bingo-cell" id="44" on:click={handle_cell_click}
-        ><div class="cell-handler">
-          <span class="cell-text"
-            >{translate(grid_id[4][4], lang, data.translator.trans)}</span
-          >
-        </div></button
-      >
-    </div>
+            <div class="cell-handler">
+              <span class="cell-text">
+                {translate(cell, lang, data.translator.trans)}
+              </span>
+            </div>
+          </button>
+        {/each}
+      </div>
+    {/each}
   </section>
 
   <div class="vline" />

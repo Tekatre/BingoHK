@@ -33,9 +33,9 @@ export const load: PageServerLoad = async () => {
   grid_id = build_grid_id(grid_id, seed, short_entries)
   return {
     first_grid : {grid_id},
-    short : {short_entries},
-    mid : {mid_entries},
-    long : {long_entries},
+    short : {"value" :short_entries},
+    mid : {"value" :mid_entries},
+    long : {"value" :long_entries},
     translator : {"trans" : translator}
   }
 };

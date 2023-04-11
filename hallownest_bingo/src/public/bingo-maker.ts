@@ -7,12 +7,13 @@
  * @param entries  the list of ids of all the entries that can appear in the bingo grid 
  */
 export function build_grid_id(grid:number[][], seed:number, entries:number[]) : number[][]{
+  let entries_cpy : number[] = JSON.parse(JSON.stringify(entries))
   for (let row = 0; row < grid.length; row++) {
     for (let line = 0; line < grid[row].length; line++) {
       seed = gcl_step(seed)
-      let index = seed % entries.length
-      grid[row][line] = entries[index]
-      entries.splice(index,1)
+      let index = seed % entries_cpy.length
+      grid[row][line] = entries_cpy[index]
+      entries_cpy.splice(index,1)
     }
   }
   return grid
@@ -57,3 +58,11 @@ export function translate(id:number, langage:String, translator: any[]) : string
   return desc
 }
 
+export function manage_seed(seeded : boolean) : number {
+  if (seeded) {
+    return(parseInt((<HTMLInputElement>document.getElementById("seed-input")).value))
+  }
+  else {
+    return Math.floor(Math.random() * 10000);
+  }
+}

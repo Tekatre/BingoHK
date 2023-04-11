@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import { translate } from "../public/bingo-maker";
+  import { build_grid_id, translate, manage_seed } from "../public/bingo-maker";
   import { cell_select_switch, check_win } from "../public/bingo-manager";
 
   export let data: PageData;
@@ -15,6 +15,11 @@
     //console.log(win_grid);
   }
 
+  function handle_length_mode_select(event: MouseEvent) {
+    len = (<HTMLButtonElement>event.currentTarget).id;
+    generate_bingo(len, false);
+  }
+
   let win_grid: number[][] = [
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
@@ -25,6 +30,27 @@
 
   let grid_id: number[][] = data.first_grid.grid_id;
   let lang: string = "fr";
+  let len: string = "short";
+
+  function generate_bingo(len: string, seeded: boolean) {
+    let seed: number = manage_seed(seeded);
+    switch (len) {
+      case "short":
+        grid_id = build_grid_id(grid_id, seed, data.short.value);
+        break;
+      case "mid":
+        grid_id = build_grid_id(grid_id, seed, data.mid.value);
+        break;
+      case "long":
+        grid_id = build_grid_id(grid_id, seed, data.long.value);
+        break;
+      default:
+        grid_id = build_grid_id(grid_id, seed, data.short.value);
+        break;
+    }
+    (<HTMLInputElement>document.getElementById("seed-input")).value =
+      seed.toString();
+  }
 </script>
 
 <main>
@@ -244,16 +270,29 @@
   <h2>GENERATE GRID</h2>
   <section class="bingo-generator">
     <div class="button-list">
-      <button class="inter-button selected">
-        <div class="button-handler">X</div></button
+      <button
+        class="inter-button selected"
+        id="short"
+        on:click={handle_length_mode_select}
       >
-      <button class="inter-button"><div class="button-handler">X</div></button>
-      <button class="inter-button"><div class="button-handler">X</div></button>
-      <button class="inter-button"><div class="button-handler">X</div></button>
+        <div class="button-handler">Short</div></button
+      >
+      <button class="inter-button" id="mid" on:click={handle_length_mode_select}
+        ><div class="button-handler">Mid</div></button
+      >
+      <button
+        class="inter-button"
+        id="long"
+        on:click={handle_length_mode_select}
+        ><div class="button-handler">Long</div></button
+      >
+      <button class="inter-button" id="?"
+        ><div class="button-handler">?</div></button
+      >
     </div>
     <form class="seed-form">
       <span>SEED :</span>
-      <input type="text" />
+      <input type="text" id="seed-input" />
       <input type="button" value="RUN" class="run-button" />
     </form>
   </section>

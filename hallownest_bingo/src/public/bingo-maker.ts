@@ -59,7 +59,7 @@ export function translate(id:number, langage:String, translator: any[]) : string
   return desc
 }
 
-export function manage_seed(seeded : boolean) : string {
+function manage_seed(seeded : boolean) : string {
   if (seeded) {
     return((<HTMLInputElement>document.getElementById("seed-input")).value)
   }
@@ -67,3 +67,25 @@ export function manage_seed(seeded : boolean) : string {
     return Math.floor(Math.random() * 10000).toString();
   }
 }
+
+type Entries = {"short": number[], "mid":number[], "long": number[]}
+
+export function generate_bingo(len: string, seed: string, grid_id:number[][] ,seeded: boolean, entries: Entries) : [number[][],string] {
+    seed = manage_seed(seeded);
+    let new_grid_id : number [][];
+    switch (len) {
+      case "short":
+        new_grid_id = build_grid_id(grid_id, seed, entries.short);
+        break;
+      case "mid":
+        new_grid_id = build_grid_id(grid_id, seed, entries.mid);
+        break;
+      case "long":
+        new_grid_id = build_grid_id(grid_id, seed, entries.long);
+        break;
+      default:
+        new_grid_id = build_grid_id(grid_id, seed, entries.short);
+        break;
+    }
+    return[new_grid_id, seed];
+  }

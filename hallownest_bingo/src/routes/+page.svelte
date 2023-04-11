@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import { build_grid_id, translate, manage_seed } from "../public/bingo-maker";
+  import { translate, generate_bingo } from "../public/bingo-maker";
   import { cell_select_switch, check_win } from "../public/bingo-manager";
 
   export let data: PageData;
@@ -17,7 +17,7 @@
 
   function handle_length_mode_select(event: MouseEvent) {
     len = (<HTMLButtonElement>event.currentTarget).id;
-    generate_bingo(len, false);
+    [grid_id, seed] = generate_bingo(len, seed, grid_id, false, data.entries);
   }
 
   let win_grid: number[][] = [
@@ -32,26 +32,7 @@
   let lang: string = "fr";
   let len: string = "short";
   let seed: string = data.first_seed;
-
-  function generate_bingo(len: string, seeded: boolean) {
-    let seed: string = manage_seed(seeded);
-    switch (len) {
-      case "short":
-        grid_id = build_grid_id(grid_id, seed, data.short.value);
-        break;
-      case "mid":
-        grid_id = build_grid_id(grid_id, seed, data.mid.value);
-        break;
-      case "long":
-        grid_id = build_grid_id(grid_id, seed, data.long.value);
-        break;
-      default:
-        grid_id = build_grid_id(grid_id, seed, data.short.value);
-        break;
-    }
-    (<HTMLInputElement>document.getElementById("seed-input")).value =
-      seed.toString();
-  }
+  let select_state: boolean = true;
 </script>
 
 <main>
@@ -247,9 +228,15 @@
     <section class="option-display">
       <h4>SELECTION</h4>
       <div class="button-list">
-        <button class="inter-button"><div class="button-handler">X</div></button
+        <button class="inter-button"
+          ><div class="button-handler">
+            <img src="../src/sel_icon.png" sizes="120%" />
+          </div></button
         >
-        <button class="inter-button"><div class="button-handler">X</div></button
+        <button class="inter-button"
+          ><div class="button-handler">
+            <img src="../src/lock_icon.png" />
+          </div></button
         >
       </div>
     </section>

@@ -12,7 +12,7 @@ export const load: PageServerLoad = async () => {
   var short_entries : number[] = [];
   var mid_entries : number[] = [];
   var long_entries : number[] = [];
-  var translator : any[] = [];
+  var translator : unknown[] = [];
   challenges.forEach(chall => {
     switch (chall.diff) {
       case 1:
@@ -34,9 +34,7 @@ export const load: PageServerLoad = async () => {
   return {
     first_seed : seed,
     first_grid : grid_id,
-    short : {"value" :short_entries},
-    mid : {"value" :mid_entries},
-    long : {"value" :long_entries},
+    entries : { "short" : short_entries, "mid" : mid_entries, "long" : long_entries},
     translator : {"trans" : translator}
   }
 };

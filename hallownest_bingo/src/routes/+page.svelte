@@ -28,12 +28,13 @@
     [0, 0, 0, 0, 0],
   ];
 
-  let grid_id: number[][] = data.first_grid.grid_id;
+  let grid_id: number[][] = data.first_grid;
   let lang: string = "fr";
   let len: string = "short";
+  let seed: string = data.first_seed;
 
   function generate_bingo(len: string, seeded: boolean) {
-    let seed: number = manage_seed(seeded);
+    let seed: string = manage_seed(seeded);
     switch (len) {
       case "short":
         grid_id = build_grid_id(grid_id, seed, data.short.value);
@@ -292,7 +293,7 @@
     </div>
     <form class="seed-form">
       <span>SEED :</span>
-      <input type="text" id="seed-input" />
+      <input type="text" id="seed-input" bind:value={seed} />
       <input type="button" value="RUN" class="run-button" />
     </form>
   </section>

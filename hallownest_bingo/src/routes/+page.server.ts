@@ -4,7 +4,7 @@ import challenges from "../public/challenges.json";
 import { build_grid_id } from "../public/bingo-maker";
 import { json } from "@sveltejs/kit";
 
-let seed: number = Math.floor(Math.random() * 10000);
+let seed: string = Math.floor(Math.random() * 10000).toString();
 let grid_id : number[][] = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 
 
@@ -32,7 +32,8 @@ export const load: PageServerLoad = async () => {
   });
   grid_id = build_grid_id(grid_id, seed, short_entries)
   return {
-    first_grid : {grid_id},
+    first_seed : seed,
+    first_grid : grid_id,
     short : {"value" :short_entries},
     mid : {"value" :mid_entries},
     long : {"value" :long_entries},

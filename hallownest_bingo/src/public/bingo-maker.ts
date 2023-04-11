@@ -6,12 +6,13 @@
  * @param seed  a randomly generated integer
  * @param entries  the list of ids of all the entries that can appear in the bingo grid 
  */
-export function build_grid_id(grid:number[][], seed:number, entries:number[]) : number[][]{
+export function build_grid_id(grid:number[][], seed:string, entries:number[]) : number[][]{
+  let num_seed : number = parseInt(seed,10);
   let entries_cpy : number[] = JSON.parse(JSON.stringify(entries))
   for (let row = 0; row < grid.length; row++) {
     for (let line = 0; line < grid[row].length; line++) {
-      seed = gcl_step(seed)
-      let index = seed % entries_cpy.length
+      num_seed = gcl_step(num_seed)
+      let index = num_seed % entries_cpy.length
       grid[row][line] = entries_cpy[index]
       entries_cpy.splice(index,1)
     }
@@ -58,11 +59,11 @@ export function translate(id:number, langage:String, translator: any[]) : string
   return desc
 }
 
-export function manage_seed(seeded : boolean) : number {
+export function manage_seed(seeded : boolean) : string {
   if (seeded) {
-    return(parseInt((<HTMLInputElement>document.getElementById("seed-input")).value))
+    return((<HTMLInputElement>document.getElementById("seed-input")).value)
   }
   else {
-    return Math.floor(Math.random() * 10000);
+    return Math.floor(Math.random() * 10000).toString();
   }
 }

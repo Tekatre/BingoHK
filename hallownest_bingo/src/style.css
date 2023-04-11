@@ -270,7 +270,7 @@ main {
   color: var(--lightTxt-D);
 }
 
-.lock {
+.locked {
   background-image: url("lock_selector.png");
   background-size: 245%;
   background-repeat: repeat-y;

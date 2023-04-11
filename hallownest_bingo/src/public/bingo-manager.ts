@@ -79,3 +79,7 @@ function check_diag(grid :number[][]) {
     }
   }
 }
+
+export function clear_grid_select(win_grid:number[][], classes_grid:string[][]) : [number[][],string[][]] {
+  return([[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],[["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]]])
+}

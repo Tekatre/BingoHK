@@ -1,21 +1,45 @@
 <script lang="ts">
   import type { PageData } from "./$types";
   import { translate, generate_bingo } from "../public/bingo-maker";
-  import { cell_select_switch, check_win } from "../public/bingo-manager";
+  import { check_win } from "../public/bingo-manager";
 
   export let data: PageData;
 
-  function handle_cell_click(event: MouseEvent) {
-    if (event.currentTarget instanceof HTMLButtonElement) {
-      cell_select_switch(event.currentTarget, win_grid);
-      check_win(win_grid);
+  function handle_cell_click(row: number, column: number) {
+    if (select_state) {
+      if (classes_grid[row][column] == "") {
+        classes_grid[row][column] = "selected";
+        win_grid[row][column] = 1;
+      } else if (classes_grid[row][column] == "selected") {
+        classes_grid[row][column] = "";
+        win_grid[row][column] = 0;
+      }
     } else {
-      console.log(typeof event.currentTarget);
+      if (classes_grid[row][column] == "") {
+        classes_grid[row][column] = "locked";
+      } else if (classes_grid[row][column] == "locked") {
+        classes_grid[row][column] = "";
+      }
     }
+    check_win(win_grid);
     //console.log(win_grid);
   }
 
   function handle_length_mode_select(event: MouseEvent) {
+    classes_grid = [
+      ["", "", "", "", ""],
+      ["", "", "", "", ""],
+      ["", "", "", "", ""],
+      ["", "", "", "", ""],
+      ["", "", "", "", ""],
+    ];
+    win_grid = [
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+    ];
     len = (<HTMLButtonElement>event.currentTarget).id;
     [grid_id, seed] = generate_bingo(len, seed, grid_id, false, data.entries);
   }
@@ -26,6 +50,14 @@
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
+  ];
+
+  let classes_grid: string[][] = [
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
   ];
 
   let grid_id: number[][] = data.first_grid;
@@ -41,9 +73,9 @@
       <div class="bingo-row">
         {#each row as cell, j}
           <button
-            class="bingo-cell"
+            class={`bingo-cell ${classes_grid[i][j]}`}
             id={`${i}${j}`}
-            on:click={handle_cell_click}
+            on:click={() => handle_cell_click(i, j)}
           >
             <div class="cell-handler">
               <span class="cell-text">

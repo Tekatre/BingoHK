@@ -262,7 +262,7 @@ main {
   );
 }
 
-.selected {
+.bingo-cell.selected {
   background-image: url("button-selector.png");
   background-size: 90%;
   background-repeat: no-repeat;
@@ -270,7 +270,7 @@ main {
   color: var(--lightTxt-D);
 }
 
-.locked {
+.cell-handler.locked {
   background-image: url("lock_selector.png");
   background-size: 245%;
   background-repeat: repeat-y;
@@ -283,7 +283,7 @@ main {
   border-color: var(--winBG);
 }
 
-.win {
+.cell-handler.win {
   background-image: url("back_disc_50_percent.png");
   background-size: 90%;
   background-repeat: no-repeat;

@@ -10,7 +10,10 @@
       if (classes_grid[row][column] == "") {
         classes_grid[row][column] = "selected";
         win_grid[row][column] = 1;
-      } else if (classes_grid[row][column] == "selected") {
+      } else if (
+        classes_grid[row][column] == "selected" ||
+        classes_grid[row][column] == "win"
+      ) {
         classes_grid[row][column] = "";
         win_grid[row][column] = 0;
       }
@@ -21,8 +24,8 @@
         classes_grid[row][column] = "";
       }
     }
-    check_win(win_grid);
-    //console.log(win_grid);
+    check_win(win_grid, classes_grid);
+    classes_grid = classes_grid;
   }
 
   function handle_length_mode_select(event: MouseEvent) {
@@ -77,7 +80,7 @@
             id={`${i}${j}`}
             on:click={() => handle_cell_click(i, j)}
           >
-            <div class="cell-handler">
+            <div class={`cell-handler ${classes_grid[i][j]}`}>
               <span class="cell-text">
                 {translate(cell, lang, data.translator.trans)}
               </span>
@@ -94,12 +97,20 @@
     <section class="option-display">
       <h4>SELECTION</h4>
       <div class="button-list">
-        <button class="inter-button"
+        <button
+          class="inter-button"
+          on:click={() => {
+            select_state = true;
+          }}
           ><div class="button-handler">
-            <img src="../src/sel_icon.png" sizes="120%" />
+            <img src="../src/sel_icon.png" />
           </div></button
         >
-        <button class="inter-button"
+        <button
+          class="inter-button"
+          on:click={() => {
+            select_state = false;
+          }}
           ><div class="button-handler">
             <img src="../src/lock_icon.png" />
           </div></button

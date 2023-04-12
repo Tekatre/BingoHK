@@ -48,6 +48,10 @@
     console.log(len);
   }
 
+  function switch_lang(new_lang: string) {
+    lang = new_lang;
+  }
+
   function check_short(len: string): string {
     if (len == "short") {
       return "selected";
@@ -172,10 +176,10 @@
     <section class="option-display">
       <h4>LANGUAGE</h4>
       <div class="button-list column-gap-10px">
-        <button class="flag-button"
+        <button class="flag-button" on:click={() => switch_lang("en")}
           ><img class="flag-display" src="../src/en_flag.png" /></button
         >
-        <button class="flag-button"
+        <button class="flag-button" on:click={() => switch_lang("fr")}
           ><img class="flag-display" src="../src/fr_flag.png" /></button
         >
       </div>

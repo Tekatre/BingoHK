@@ -66,7 +66,7 @@
   ];
 
   let grid_id: number[][] = data.first_grid;
-  let lang: string = "fr";
+  let lang: string = "en";
   let len: string = "short";
   let seed: string = data.first_seed;
   let select_state: boolean = true;
@@ -144,21 +144,29 @@
           handle_length_mode_select("short", false);
         }}
       >
-        <div class="button-handler">Short</div></button
+        <div class="button-handler">
+          <img src="../src/short_icon.png" />
+        </div></button
       >
       <button
         class="inter-button"
         id="mid"
         on:click={() => {
           handle_length_mode_select("mid", false);
-        }}><div class="button-handler">Mid</div></button
+        }}
+        ><div class="button-handler">
+          <img src="../src/mid_icon.png" />
+        </div></button
       >
       <button
         class="inter-button"
         id="long"
         on:click={() => {
           handle_length_mode_select("long", false);
-        }}><div class="button-handler">Long</div></button
+        }}
+        ><div class="button-handler">
+          <img src="../src/long_icon.png" />
+        </div></button
       >
       <button class="inter-button" id="?"
         ><div class="button-handler">?</div></button

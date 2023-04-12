@@ -169,6 +169,17 @@
         >
       </div>
     </section>
+    <section class="option-display">
+      <h4>LANGUAGE</h4>
+      <div class="button-list column-gap-10px">
+        <button class="flag-button"
+          ><img class="flag-display" src="../src/en_flag.png" /></button
+        >
+        <button class="flag-button"
+          ><img class="flag-display" src="../src/fr_flag.png" /></button
+        >
+      </div>
+    </section>
   </aside>
 </main>
 

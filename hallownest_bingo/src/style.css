@@ -347,6 +347,24 @@ aside {
   color: var(--lightTxt-D);
 }
 
+.flag-button {
+  background-color: transparent;
+  border: none;
+  justify-content: center;
+
+  height: 30px;
+  width: 40px;
+}
+
+.column-gap-10px {
+  column-gap: 10px;
+}
+
+.flag-display {
+  height: 25px;
+  width: auto;
+}
+
 h4 {
   color: var(--lightTxt-L);
   font-size: large;

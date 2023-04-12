@@ -29,7 +29,6 @@
   }
 
   function handle_length_mode_select(len_code: string, seeded: boolean) {
-    //console.log(seed, seeded);
     classes_grid = [
       ["", "", "", "", ""],
       ["", "", "", "", ""],
@@ -46,7 +45,47 @@
     ];
     len = len_code;
     [grid_id, seed] = generate_bingo(len, seed, grid_id, seeded, data.entries);
-    //console.log(seed);
+    console.log(len);
+  }
+
+  function check_short(len: string): string {
+    if (len == "short") {
+      return "selected";
+    } else {
+      return "";
+    }
+  }
+
+  function check_mid(len: string): string {
+    if (len == "mid") {
+      return "selected";
+    } else {
+      return "";
+    }
+  }
+
+  function check_long(len: string): string {
+    if (len == "long") {
+      return "selected";
+    } else {
+      return "";
+    }
+  }
+
+  function check_select(select_state: boolean): string {
+    if (select_state) {
+      return "selected";
+    } else {
+      return "";
+    }
+  }
+
+  function check_lock(select_state: boolean): string {
+    if (!select_state) {
+      return "selected";
+    } else {
+      return "";
+    }
   }
 
   let win_grid: number[][] = [
@@ -100,7 +139,7 @@
       <h4>SELECTION</h4>
       <div class="button-list">
         <button
-          class="inter-button"
+          class={`inter-button ${check_select(select_state)}`}
           on:click={() => {
             select_state = true;
           }}
@@ -109,7 +148,7 @@
           </div></button
         >
         <button
-          class="inter-button"
+          class={`inter-button ${check_lock(select_state)}`}
           on:click={() => {
             select_state = false;
           }}
@@ -138,7 +177,7 @@
   <section class="bingo-generator">
     <div class="button-list">
       <button
-        class="inter-button selected"
+        class={`inter-button ${check_short(len)}`}
         id="short"
         on:click={() => {
           handle_length_mode_select("short", false);
@@ -149,7 +188,7 @@
         </div></button
       >
       <button
-        class="inter-button"
+        class={`inter-button ${check_mid(len)}`}
         id="mid"
         on:click={() => {
           handle_length_mode_select("mid", false);
@@ -159,7 +198,7 @@
         </div></button
       >
       <button
-        class="inter-button"
+        class={`inter-button ${check_long(len)}`}
         id="long"
         on:click={() => {
           handle_length_mode_select("long", false);

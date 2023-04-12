@@ -339,6 +339,14 @@ aside {
   overflow-x: auto;
 }
 
+.inter-button.selected {
+  background-image: url("button-selector.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 49%;
+  color: var(--lightTxt-D);
+}
+
 h4 {
   color: var(--lightTxt-L);
   font-size: large;

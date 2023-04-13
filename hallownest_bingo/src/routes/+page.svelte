@@ -239,4 +239,13 @@
       />
     </form>
   </section>
+  <span class="hidden-text">
+    This website was created by Tekatre. If you want to provide some feedback,
+    you can fill up <a
+      class="form-link"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfvfOpJMLAsfPe9TLvBljk-wBtnX-82hybLQMXYBksgDsMkUg/viewform?usp=sf_link"
+    >
+      this form
+    </a> .
+  </span>
 </footer>

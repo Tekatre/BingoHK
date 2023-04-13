@@ -483,3 +483,17 @@ tr {
 
   height: fit-content;
 }
+
+.hidden-text {
+  color: var(--lightTxt-D);
+  font-size: small;
+  padding: 5px;
+  font-family: sans-serif;
+}
+
+.form-link {
+  color: var(--lightTxt-L);
+  font-size: small;
+  padding: 0;
+  padding-left: 2px;
+}

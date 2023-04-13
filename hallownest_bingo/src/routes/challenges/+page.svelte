@@ -1,5 +1,5 @@
 <script lang="ts">
-  import challs from "../../public/challenges.json";
+  import challs from "../../challenges.json";
   console.log("oui ça démarre");
 </script>
 

@@ -1,7 +1,7 @@
 import type { PageServerLoad } from "./$types";
 import { error } from "@sveltejs/kit";
-import challenges from "../public/challenges.json";
-import { build_grid_id } from "../public/bingo-maker";
+import challenges from "../challenges.json";
+import { build_grid_id } from "$lib/bingo-maker";
 import { json } from "@sveltejs/kit";
 
 let seed: string = Math.floor(Math.random() * 10000).toString();

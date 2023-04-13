@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import { translate, generate_bingo } from "../public/bingo-maker";
-  import { check_win } from "../public/bingo-manager";
+  import { translate, generate_bingo } from "$lib/bingo-maker";
+  import { check_win } from "$lib/bingo-manager";
 
   export let data: PageData;
 
@@ -148,7 +148,7 @@
             select_state = true;
           }}
           ><div class="button-handler">
-            <img src="../src/sel_icon.png" />
+            <img src="./images/sel_icon.png" />
           </div></button
         >
         <button
@@ -157,7 +157,7 @@
             select_state = false;
           }}
           ><div class="button-handler">
-            <img src="../src/lock_icon.png" />
+            <img src="./images/lock_icon.png" />
           </div></button
         >
       </div>
@@ -177,10 +177,10 @@
       <h4>LANGUAGE</h4>
       <div class="button-list column-gap-10px">
         <button class="flag-button" on:click={() => switch_lang("en")}
-          ><img class="flag-display" src="../src/en_flag.png" /></button
+          ><img class="flag-display" src="./images/en_flag.png" /></button
         >
         <button class="flag-button" on:click={() => switch_lang("fr")}
-          ><img class="flag-display" src="../src/fr_flag.png" /></button
+          ><img class="flag-display" src="./images/fr_flag.png" /></button
         >
       </div>
     </section>
@@ -199,7 +199,7 @@
         }}
       >
         <div class="button-handler">
-          <img src="../src/short_icon.png" />
+          <img src="./images/short_icon.png" />
         </div></button
       >
       <button
@@ -209,7 +209,7 @@
           handle_length_mode_select("mid", false);
         }}
         ><div class="button-handler">
-          <img src="../src/mid_icon.png" />
+          <img src="./images/mid_icon.png" />
         </div></button
       >
       <button
@@ -219,7 +219,7 @@
           handle_length_mode_select("long", false);
         }}
         ><div class="button-handler">
-          <img src="../src/long_icon.png" />
+          <img src="./images/long_icon.png" />
         </div></button
       >
       <button class="inter-button" id="?"

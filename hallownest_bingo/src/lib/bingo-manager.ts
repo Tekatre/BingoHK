@@ -48,7 +48,7 @@ function check_diag(grid :number[][], classes_grid: string[][]) {
   }
   if (NE_buffer == 1) {
     for (let index = 0; index < grid.length; index++) {
-      set_win(classes_grid, grid.length- index, index);
+      set_win(classes_grid, grid.length -1 - index, index);
     }
   }
 }

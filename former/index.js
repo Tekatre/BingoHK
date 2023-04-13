@@ -128,7 +128,7 @@ const long_entries = [
   "Obtenir la Canalisation Intense",
   "Obtenir le Noyau Sang de Vie",
   "Obtenir la Bénédiction de Joni",
-  "Obtenir le Sang de Riche",
+  "Obtenir le Sang de Ruche",
   "Obtenir l'Ombre Tranchante",
   "Obtenir la Forme d'Unn",
   "Obtenir la Gloir du Maître d'Aiguillon",

@@ -2,5 +2,5 @@
   font-family: "Trajan";
   font-style: normal;
   font-weight: 500;
-  src: local(""), url("./fonts/Trajan-Pro-Regular.ttf") format("truetype");
+  src: local(""), url("/fonts/Trajan-Pro-Regular.ttf") format("truetype");
 }

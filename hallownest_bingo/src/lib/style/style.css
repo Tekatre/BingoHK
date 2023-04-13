@@ -183,7 +183,7 @@ main {
 }
 
 .bingo-cell:hover {
-  background-image: url("../images/button-selector-hover.png");
+  background-image: url("/images/button-selector-hover.png");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: 49%;
@@ -235,7 +235,7 @@ main {
 }
 
 .inter-button:hover {
-  background-image: url("../images/button-selector-hover.png");
+  background-image: url("/images/button-selector-hover.png");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: 49%;
@@ -263,7 +263,7 @@ main {
 }
 
 .bingo-cell.selected {
-  background-image: url("../images/button-selector.png");
+  background-image: url("/images/button-selector.png");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: 49%;
@@ -271,7 +271,7 @@ main {
 }
 
 .cell-handler.locked {
-  background-image: url("../images/lock_selector.png");
+  background-image: url("/images/lock_selector.png");
   background-size: 245%;
   background-repeat: repeat-y;
   background-position: 50% 5%;
@@ -284,7 +284,7 @@ main {
 }
 
 .cell-handler.win {
-  background-image: url("../images/win_selector.png");
+  background-image: url("/images/win_selector.png");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -340,7 +340,7 @@ aside {
 }
 
 .inter-button.selected {
-  background-image: url("../images/button-selector.png");
+  background-image: url("/images/button-selector.png");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: 49%;

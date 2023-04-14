@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const max_seed : number = 4; 
+const max_seed : number = 10; 
 
 /**
  * Upate the grid with the ids of challenges in the list of entries

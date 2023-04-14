@@ -1,4 +1,6 @@
+import { z } from "zod";
 
+const max_seed : number = 4; 
 
 /**
  * Upate the grid with the ids of challenges in the list of entries
@@ -60,12 +62,18 @@ export function translate(id:number, langage:String, translator: any[]) : string
 }
 
 function manage_seed(seed : string , seeded : boolean) : string {
+  const checker = z.string().regex(new RegExp(/[0-9]+/)).max(max_seed+1).safeParse(seed);
   //console.log(seeded, seed)
-  if (seeded) {
-    return seed
+  if( !checker.success) {
+    return (Math.floor(Math.random() * Math.pow(10,max_seed)).toString());
   }
   else {
-    return Math.floor(Math.random() * 10000).toString();
+    if (seeded) {
+      return seed
+    }
+    else {
+      return Math.floor(Math.random() * Math.pow(10,max_seed)).toString();
+    }
   }
 }
 

@@ -45,7 +45,6 @@
     ];
     len = len_code;
     [grid_id, seed] = generate_bingo(len, seed, grid_id, seeded, data.entries);
-    console.log(len);
   }
 
   function switch_lang(new_lang: string) {

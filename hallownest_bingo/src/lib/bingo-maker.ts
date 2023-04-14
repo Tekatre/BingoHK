@@ -1,4 +1,6 @@
+import { z } from "zod";
 
+const max_seed : number = 10; 
 
 /**
  * Upate the grid with the ids of challenges in the list of entries
@@ -59,18 +61,39 @@ export function translate(id:number, langage:String, translator: any[]) : string
   return desc
 }
 
+/**
+ * Check the format of the seed and generate a new and valid one if needed
+ * @param seed a string of numbers
+ * @param seeded a boolean indicating if the seed must be used of if a new one must be generated
+ * @returns a string that is the new seed
+ */
 function manage_seed(seed : string , seeded : boolean) : string {
+  const checker = z.string().regex(new RegExp(/[0-9]+/)).max(max_seed+1).safeParse(seed);
   //console.log(seeded, seed)
-  if (seeded) {
-    return seed
+  if( !checker.success) {
+    return (Math.floor(Math.random() * Math.pow(10,max_seed)).toString());
   }
   else {
-    return Math.floor(Math.random() * 10000).toString();
+    if (seeded) {
+      return seed
+    }
+    else {
+      return Math.floor(Math.random() * Math.pow(10,max_seed)).toString();
+    }
   }
 }
 
 type Entries = {"short": number[], "mid":number[], "long": number[]}
 
+/**
+ * Generate a grid of the challenges ids depending on the parameters
+ * @param len a string that indicate the length format of the wanted bingo grid. Possible values are "short", "mid" or "long"
+ * @param seed a string of numbers
+ * @param grid_id a matrix of numbers containing the ids of the callenges that are out in the bingo
+ * @param seeded a boolean that indicates if the seed must be generared or not
+ * @param entries an Entries object containing the list of ids of challenges depending on the length format they fit in
+ * @returns an array of a matrix of numbers representing the bingo grid and the seed used to create it
+ */
 export function generate_bingo(len: string, seed: string, grid_id:number[][] ,seeded: boolean, entries: Entries) : [number[][],string] {
     seed = manage_seed(seed, seeded);
     //console.log(seed)

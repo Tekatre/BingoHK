@@ -1,7 +1,16 @@
-<script>
+<script lang="ts">
   import "$lib/style/fonts.css";
   import "../app.postcss";
   import "$lib/style/style.css";
+  import inter_text from "../interface.json";
+  import { inter_translate } from "$lib/bingo-maker";
+  import { writable } from "svelte/store";
+  import { setContext } from "svelte";
+
+  const lang = writable();
+  lang.set("en");
+  console.log(lang);
+  setContext("lang", lang);
 </script>
 
 <header>
@@ -11,7 +20,7 @@
 </header>
 
 <nav>
-  <a href="/">GAME</a>
+  <a href="/"> GAME </a>
   <a href="/challenges">CHALLENGES</a>
 </nav>
 

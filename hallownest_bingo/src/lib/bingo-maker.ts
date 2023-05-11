@@ -61,6 +61,24 @@ export function translate(id:number, langage:String, translator: any[]) : string
   return desc
 }
 
+type Translator = {"en":string, "fr":string}
+
+export function inter_translate(lang:string, translator :  Translator) : string {
+  let desc : string = "placeholder"
+  switch (lang) {
+    case "fr":
+      desc = translator.fr
+      break;
+    case "en":
+      desc = translator.en
+      break;
+    default:
+      desc = translator.en
+      break;
+  }
+  return desc
+}
+
 /**
  * Check the format of the seed and generate a new and valid one if needed
  * @param seed a string of numbers

@@ -5,6 +5,6 @@
   "side_theme" : {"en":"THEME", "fr":"THEME"},
   "side_lang" : {"en": "LANGUAGE", "fr" :"LANGUE"},
   "footer_title": {"en": "GENERATE SEED", "fr": "GENERER UNE GRAINE"},
-  "footer_seed" : {"en" : "SEED", "fr":"GRAINE"},
+  "footer_seed" : {"en" : "SEED :", "fr":"GRAINE :"},
   "footer_run" : {"en": "RUN", "fr": "LANCER"}
 }

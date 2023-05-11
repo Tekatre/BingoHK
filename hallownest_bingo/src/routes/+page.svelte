@@ -1,9 +1,13 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import { translate, generate_bingo } from "$lib/bingo-maker";
+  import { translate, inter_translate, generate_bingo } from "$lib/bingo-maker";
   import { check_win } from "$lib/bingo-manager";
+  import { getContext } from "svelte";
+  import inter_text from "../interface.json";
 
   export let data: PageData;
+
+  let lang: string = getContext("lang");
 
   function handle_cell_click(row: number, column: number) {
     if (select_state) {
@@ -108,7 +112,6 @@
   ];
 
   let grid_id: number[][] = data.first_grid;
-  let lang: string = "en";
   let len: string = "short";
   let seed: string = data.first_seed;
   let select_state: boolean = true;
@@ -139,7 +142,7 @@
 
   <aside>
     <section class="option-display">
-      <h4>SELECTION</h4>
+      <h4>{inter_translate(lang, inter_text.side_selection)}</h4>
       <div class="button-list">
         <button
           class={`inter-button ${check_select(select_state)}`}
@@ -162,7 +165,7 @@
       </div>
     </section>
     <section class="option-display">
-      <h4>THEME</h4>
+      <h4>{inter_translate(lang, inter_text.side_theme)}</h4>
       <div class="button-list">
         <button class="inter-button"><div class="button-handler">W</div></button
         >
@@ -173,7 +176,7 @@
       </div>
     </section>
     <section class="option-display">
-      <h4>LANGUAGE</h4>
+      <h4>{inter_translate(lang, inter_text.side_lang)}</h4>
       <div class="button-list column-gap-10px">
         <button class="flag-button" on:click={() => switch_lang("en")}
           ><img class="flag-display" src="./images/en_flag.png" /></button
@@ -187,7 +190,7 @@
 </main>
 
 <footer>
-  <h2>GENERATE GRID</h2>
+  <h2>{inter_translate(lang, inter_text.footer_title)}</h2>
   <section class="bingo-generator">
     <div class="button-list">
       <button
@@ -226,11 +229,11 @@
       >
     </div>
     <form class="seed-form">
-      <span>SEED :</span>
+      <span>{inter_translate(lang, inter_text.footer_seed)}</span>
       <input type="text" id="seed-input" bind:value={seed} />
       <input
         type="button"
-        value="RUN"
+        value={inter_translate(lang, inter_text.footer_run)}
         class="run-button"
         on:click={() => {
           handle_length_mode_select(len, true);

@@ -1,0 +1,10 @@
+{
+  "navbar_game" : {"en":"GAME", "fr":"JEU"},
+  "navbar_bar" : {"en":"CHALLENGES", "fr":"DEFIS"},
+  "side_selection" : {"en":"SELECTION", "fr":"SELECTION"},
+  "side_theme" : {"en":"THEME", "fr":"THEME"},
+  "side_lang" : {"en": "LANGUAGE", "fr" :"LANGUE"},
+  "footer_title": {"en": "GENERATE SEED", "fr": "GENERER UNE GRAINE"},
+  "footer_seed" : {"en" : "SEED", "fr":"GRAINE"},
+  "footer_run" : {"en": "RUN", "fr": "LANCER"}
+}
